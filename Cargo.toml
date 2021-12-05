@@ -5,6 +5,6 @@ authors = ["insprac"]
 edition = "2021"
 description = "Aximate core data structures and utilities"
 repository = "https://github.com/aximate/aximate-rs"
-liscense = "MIT"
+license = "MIT"
 
 [dependencies]
