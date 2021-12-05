@@ -14,32 +14,32 @@ const ACCOUNT_JSON_COMPACT: &str = r#"{"discord_id":"12345","name":"test","ronin
 
 fn gen_account() -> aximate::Account {
   return aximate::Account {
-    discord_id: "12345",
-    name: "test",
-    ronin: RONIN,
+    discord_id: "12345".to_string(),
+    name: "test".to_string(),
+    ronin: RONIN.to_string(),
   };
 }
 
 #[test]
 fn struct_definition() {
   let account = aximate::Account {
-    discord_id: "12345",
-    name: "test",
-    ronin: RONIN,
+    discord_id: "12345".to_string(),
+    name: "test".to_string(),
+    ronin: RONIN.to_string(),
   };
 
-  assert_eq!(account.discord_id, "12345");
-  assert_eq!(account.name, "test");
-  assert_eq!(account.ronin, RONIN);
+  assert_eq!(account.discord_id, "12345".to_string());
+  assert_eq!(account.name, "test".to_string());
+  assert_eq!(account.ronin, RONIN.to_string());
 }
 
 #[test]
 fn json_decode() {
   let account: aximate::Account = serde_json::from_str(ACCOUNT_JSON).unwrap();
 
-  assert_eq!(account.discord_id, "12345");
-  assert_eq!(account.name, "test");
-  assert_eq!(account.ronin, RONIN);
+  assert_eq!(account.discord_id, "12345".to_string());
+  assert_eq!(account.name, "test".to_string());
+  assert_eq!(account.ronin, RONIN.to_string());
 }
 
 #[test]
