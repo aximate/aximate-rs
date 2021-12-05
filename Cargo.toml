@@ -8,3 +8,7 @@ repository = "https://github.com/aximate/aximate-rs"
 license = "MIT"
 
 [dependencies]
+serde = { version = "1.0", features = ["derive"] }
+
+[dev-dependencies]
+serde_json = "1.0"
