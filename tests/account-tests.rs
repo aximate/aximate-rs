@@ -45,5 +45,16 @@ fn json_decode() {
 #[test]
 fn json_encode() {
   let encoded: &str = &serde_json::to_string(&gen_account()).unwrap();
+
   assert_eq!(encoded, ACCOUNT_JSON_COMPACT);
+}
+
+#[test]
+fn clone() {
+  let account = gen_account();
+  let copied = account.clone();
+
+  assert_eq!(account.discord_id, copied.discord_id);
+  assert_eq!(account.name, copied.name);
+  assert_eq!(account.ronin, copied.ronin);
 }

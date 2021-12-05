@@ -1,8 +1,9 @@
 use serde::{Deserialize, Serialize};
+use std::clone::Clone;
 
-#[derive(Serialize, Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Clone, Debug)]
 pub struct Account {
-    pub discord_id: String,
-    pub name: String,
-    pub ronin: String,
+  pub discord_id: String,
+  pub name: String,
+  pub ronin: String,
 }
