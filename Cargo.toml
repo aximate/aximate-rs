@@ -1,6 +1,6 @@
 [package]
 name = "aximate"
-version = "0.1.1"
+version = "0.1.2"
 authors = ["insprac"]
 edition = "2021"
 description = "Aximate core data structures and utilities"
