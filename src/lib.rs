@@ -1,5 +1,6 @@
 use serde::{Deserialize, Serialize};
 use std::clone::Clone;
+pub mod addr;
 
 #[derive(Serialize, Deserialize, Clone, Debug)]
 pub struct Account {
